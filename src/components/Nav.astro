@@ -14,10 +14,14 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
   { label: "GitHub", href: "https://github.com/XxtbmfxX", icon: "github-logo" },
   {
     label: "Linkedin",
-    href: "https://www.linkedin.com/in/alexis-toro-navarro-3a9593222/",
-    icon: "list",
+    href: "https://www.linkedin.com/in/alexis-toro-n-3a9593222/",
+    icon: "linkedin-logo",
   },
-  { label: "Platzi", href: "https://platzi.com/p/alexistoro/", icon: "code" },
+  {
+    label: "Platzi",
+    href: "https://platzi.com/p/T0R0_65/",
+    icon: "platzi-logo",
+  },
 ];
 ---
 
@@ -67,7 +71,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
       <div class="socials">
         {
           iconLinks.map(({ href, icon, label }) => (
-            <a href={href} class="social">
+            <a target="_blank" href={href} class="social">
               <span class="sr-only">{label}</span>
               <Icon icon={icon} />
             </a>

@@ -25,4 +25,3 @@ Here you can see a
 - time spend: +15 hrs
 - Reminders:
   - Keep things simple and they will work
-  -

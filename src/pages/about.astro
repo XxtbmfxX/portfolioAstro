@@ -12,111 +12,165 @@ import Hero from "../components/Hero.astro";
     <main class="wrapper about">
       <Hero
         title="About"
-        tagline="This is a little resume of the things i've done and learn">
-        <img
-          width="1553"
-          height="873"
-          src="/assets/aboutMe.jpg"
-          alt="Jeanine White at work with a colleague"
-        />
-      </Hero>
+        tagline="This is a little resume of the things I like, is a more a personal approach than a professional one "
+      />
+      <section class="Gallery">
+        <img width="1553" height="873" src="/assets/me.jpg" alt="me" />
+        <div class="Gallery_grid">
+          <img
+            class="Gallery_img_1"
+            width="1553"
+            height="873"
+            src="/assets/draw.jpg"
+            alt="draw"
+          />
 
+          <img
+            class="Gallery_img_2"
+            width="1553"
+            height="873"
+            src="/assets/callampa.jpg"
+            alt="Blender 1"
+          />
+
+          <img
+            class="Gallery_img_3"
+            width="1553"
+            height="873"
+            src="/assets/taekwondo.jpg"
+            alt="taekwondo kid"
+          />
+        </div>
+      </section>
       <section>
         <h2 class="section-title">Background</h2>
         <div class="content">
           <p>
-            I start to get knowledge about the internet and how it works about
-            12 years old. Me and my friends talked about PC components and and
-            videogames. But when I was 15 I wanted to LEARN by DOING more than
-            memorice a bunch of information from a higschool book. That lead me
-            to complete around 50 online courses at <a
-              href="https://platzi.com/">Platzi</a
-            >
-            in a period of 2 years (2019-2021).
-            <p>
-              I also was interested on doing sports: Taekwondo and Handbal.
-              During my higschool period I also teach little kids at the
-              Taekwondo club in my institute helping the teacher
-            </p>
+            Most of me web development knowledge was learn from online courses
+            at <a href="https://platzi.com/">Platzi</a> this is<a
+              href="https://platzi.com/p/T0R0_65/">
+              my profile,
+            </a>and challenges from <a
+              href="https://www.frontendmentor.io/profile/XxtbmfxX"
+              >Frontmentor</a
+            > and <a href="https://devchallenges.io/portfolio/XxtbmfxX"
+              >devchallenges</a
+            > there's more
           </p>
+          <p>
+            I'm a very physically active person. I think that exercise is
+            essential for people
+          </p>
+          <p>
+            I really enjoy to draw, sometimes also AI images and blender
+            projects.
+          </p>
+          <p>Currently I'm learning how to play the gitar.</p>
         </div>
       </section>
       <section>
         <h2 class="section-title">Education</h2>
         <div class="content">
-          <p>Corporis voluptates tenetur laudantium.</p>
+          <p>- Instituto Salesiano de Valdivia. 2010 - 2022</p>
+          <p>- Platzi ~50 web dev. courses</p>
         </div>
       </section>
       <section>
         <h2 class="section-title">Skills</h2>
         <div class="content">
-          <p>officia unde omnis</p>
-          <p>officia unde omnis</p>
-          <p>officia unde omnis</p>
-          <p>officia unde omnis</p>
-          <p>officia unde omnis</p>
+          <p style="color:aqua">React</p>
+          <p style="color:">Next</p>
+          <p style="color:greenyellow">Tailwind</p>
+          <p style="color:blueviolet">Sass</p>
+          <p style="color:aquamarine">Typescript</p>
         </div>
       </section>
     </main>
 
     <ContactCTA />
   </div>
-</BaseLayout>
 
-<style>
-  .about {
-    display: flex;
-    flex-direction: column;
-    gap: 3.5rem;
-  }
-
-  img {
-    margin-top: 1.5rem;
-    border-radius: 1.5rem;
-    box-shadow: var(--shadow-md);
-  }
-
-  section {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    color: var(--gray-200);
-  }
-
-  .section-title {
-    grid-column-start: 1;
-    font-size: var(--text-xl);
-    color: var(--gray-0);
-  }
-
-  .content {
-    grid-column: 2 / 4;
-  }
-
-  .content :global(a) {
-    text-decoration: 1px solid underline transparent;
-    text-underline-offset: 0.25em;
-    transition: text-decoration-color var(--theme-transition);
-  }
-
-  .content :global(a:hover),
-  .content :global(a:focus) {
-    text-decoration-color: currentColor;
-  }
-
-  @media (min-width: 50em) {
+  <style>
     .about {
-      display: grid;
-      grid-template-columns: 1fr 60% 1fr;
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
     }
 
-    .about > :global(:first-child) {
-      grid-column-start: 2;
+    img {
+      margin-top: 1.5rem;
+      border-radius: 1.5rem;
+      box-shadow: var(--shadow-md);
+      object-fit: cover;
     }
 
+    .Gallery {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     section {
-      display: contents;
-      font-size: var(--text-lg);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      color: var(--gray-200);
     }
-  }
-</style>
+
+    .section-title {
+      grid-column-start: 1;
+      font-size: var(--text-xl);
+      color: var(--gray-0);
+    }
+
+    .content {
+      grid-column: 2 / 4;
+    }
+
+    .content p {
+      margin-block: 10px;
+    }
+
+    .content :global(a) {
+      text-decoration: 1px solid underline transparent;
+      text-underline-offset: 0.25em;
+      transition: text-decoration-color var(--theme-transition);
+    }
+
+    .content :global(a:hover),
+    .content :global(a:focus) {
+      text-decoration-color: currentColor;
+    }
+
+    @media (min-width: 50em) {
+      .about {
+        display: grid;
+        grid-template-columns: 1fr 60% 1fr;
+      }
+
+      .about > :global(:first-child) {
+        grid-column-start: 2;
+      }
+      .Gallery {
+        grid-column-start: 2;
+      }
+
+      .Gallery_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .Gallery_img_2 {
+        grid-column: 1;
+      }
+
+      .Gallery_img_1 {
+        grid-column: span 2;
+      }
+
+      section {
+        display: contents;
+        font-size: var(--text-lg);
+      }
+    }
+  </style>
+</BaseLayout>
